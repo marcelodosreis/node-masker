@@ -1,0 +1,8 @@
+{
+  "name": "mask.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:marcelodosreis/mask.js.git",
+  "author": "marcelodosreis <marcelohrpaulo13@gmail.com>",
+  "license": "MIT"
+}
