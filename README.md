@@ -2,7 +2,10 @@
   Node Masker 🎭
 </h1>
 
-> A multi-mask lib
+[![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
+</br>
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
 
 ## Install
 
