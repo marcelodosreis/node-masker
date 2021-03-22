@@ -11,7 +11,6 @@
 ## Suport
 <img src="https://user-images.githubusercontent.com/56274028/101970313-79744500-3c08-11eb-90e5-8c09fec2d6bb.png" alt="Javascript" width="40"> <img src=https://user-images.githubusercontent.com/49694866/101971573-0c18e200-3c11-11eb-8933-b2d9e7de6dae.png alt="Typescript" width="40"> 
 <img src=https://user-images.githubusercontent.com/49694866/101971326-6d3fb600-3c0f-11eb-9d35-d34da546a40a.png alt="React" width="40"> 
-<img src=https://user-images.githubusercontent.com/49694866/111403133-4203b180-86ab-11eb-8046-18de3119a078.png alt="Angular" width="39"> 
 
 ## Install
 
