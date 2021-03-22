@@ -66,7 +66,7 @@ const InputMask = ({ mask, onChange, value, ...props }) => {
   };
 
   return (
-    <Input {...props} onChange={handleChange} value={masker(value, mask)} />
+    <input {...props} onChange={handleChange} value={masker(value, mask)} />
   );
 };
 
