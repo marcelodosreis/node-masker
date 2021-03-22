@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "build": "rm -rf build && tsc -p . && cp package_build.json README.md ./build && mv ./build/package_build.json ./build/package.json",
-    "test": "jest --no-cache --coverage"
+    "test": "jest --no-cache --coverage",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",

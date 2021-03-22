@@ -1,0 +1,12 @@
+sudo: false
+
+langague: node_js
+
+node_js:
+  - node
+
+  script:
+  - test:coveralls
+
+notification
+    email: false
