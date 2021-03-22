@@ -4,7 +4,7 @@ node_js:
   - node
 
 before_script:
-  - npm run install
+  - npm install
 
 script:
   - npm run test:coveralls
