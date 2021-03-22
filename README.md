@@ -36,4 +36,4 @@ mask('12345678000106', patterns) // gets second pattern (99.999.999/9999-99)
 
 ## License
 
-MIT © [Marcelo dos Reis](http://marcelodosreis.com)
+MIT © [Marcelo dos Reis](https://marcelodosreis.com)
