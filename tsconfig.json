@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
+    // "noImplicitAny": false,
     "lib": ["es2018", "es5"],
     "types": ["node", "@types/jest"],
     "baseUrl": ".",

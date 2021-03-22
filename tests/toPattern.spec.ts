@@ -78,4 +78,33 @@ describe('VanillaMasker.toPattern', () => {
     expect(toPattern('BBG', 'SS.SS.SSSSS.S.S.SSSSSS')).toEqual('BB.G');
   });
 
+  it('Should return "(4xx) xxx-xxxx" when input is 4 and placeholder is x', () => {
+    expect(
+      toPattern('4', { pattern: '(999) 999-9999', placeholder: 'x' }),
+    ).toEqual('(4xx) xxx-xxxx');
+  });
+
+  it('Should return "(___) ___-_____" when input is empty and placeholder is _', () => {
+    expect(
+      toPattern('', { pattern: '(999) 999-9999', placeholder: '_' }),
+    ).toEqual('(___) ___-____');
+  });
+
+  it('Should return "(111) 111-1111" when input is 1111111111 and placeholder is _', () => {
+    expect(
+      toPattern('1111111111', {
+        pattern: '(999) 999-9999',
+        placeholder: '_',
+      }),
+    ).toEqual('(111) 111-1111');
+  });
+
+  it('Should return "(aaa) _____" when input is aaa999aaaa and placeholder is _', () => {
+    expect(
+      toPattern('aaa999aaaa', {
+        pattern: '(AAA) AAAAA',
+        placeholder: '_',
+      }),
+    ).toEqual('(aaa) _____');
+  });
 });

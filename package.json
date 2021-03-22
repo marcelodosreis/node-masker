@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf build && tsc -p .",
-    "test": "jest --no-cache"
+    "test": "jest --no-cache --coverage"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",
