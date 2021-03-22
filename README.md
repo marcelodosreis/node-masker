@@ -1,11 +1,11 @@
 <br />
+<p align="center">
+  <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a></h2>
+</p>
 
 ![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
 
-<p align="center">
-  <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a>
-  </h2>
-</p>
+
 
 <div>
   
