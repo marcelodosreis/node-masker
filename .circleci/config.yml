@@ -5,3 +5,5 @@ workflows:
   node-tests:
     jobs:
       - node/test
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
