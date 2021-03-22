@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "lib": ["es2018", "es5", "dom"],
+    "noImplicitAny": false,
+    "lib": ["es2018", "es5"],
+    "types": ["node", "@types/jest"],
     "baseUrl": ".",
     "paths": {
       "@/types/*": ["./types/*"],
@@ -19,6 +21,6 @@
     "declaration": true,
     "sourceMap": false
   },
-  "exclude": ["./node_modules/**/*", "./build/**/*"],
+  "exclude": ["./node_modules/**/*", "./build/**/*", "**/tests/*.test.ts"],
   "include": ["./**/*"]
 }

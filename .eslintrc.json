@@ -1,7 +1,8 @@
 {
   "env": {
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "extends": ["airbnb-base"],
   "settings": {
@@ -16,7 +17,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint","prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "import/extensions": [
@@ -28,6 +29,9 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "operator-linebreak": 0,
+    "arrow-parens": 0,
+    "no-plusplus": 0
   }
 }
