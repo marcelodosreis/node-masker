@@ -9,9 +9,8 @@
 
 <div>
   
-<p align="center">
-  <a href="#using-react">Using React</a>
-
+<p>
+  <a href="#using-react">Using React?</a>
 </p>
 
 [![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
