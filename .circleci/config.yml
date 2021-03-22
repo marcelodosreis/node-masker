@@ -5,4 +5,4 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test:coveralls
+      - test:coveralls
