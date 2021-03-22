@@ -1,10 +1,10 @@
 {
-  "name": "node-masker-testesteste",
-  "version": "1.0.1",
+  "name": "node-masker",
+  "version": "1.0.0",
   "description": "node-masker is a javascript mask library make in TypeScript",
   "main": "build/index.js",
   "repository": "git@github.com:marcelodosreis/node-masker.git",
   "author": "marcelodosreis <marcelohrpaulo13@gmail.com>",
   "license": "MIT",
-  "keywords": ["mask", "react-mask", "react"]
+  "keywords": ["mask", "react-mask", "react", "node-mask"]
 }
