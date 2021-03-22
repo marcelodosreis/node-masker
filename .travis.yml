@@ -1,12 +1,10 @@
-sudo: false
-
-langague: node_js
+language: node_js
 
 node_js:
   - node
 
-  script:
-  - test:coveralls
+before_script:
+  - npm run install
 
-notification
-    email: false
+script:
+  - npm run test:coveralls
