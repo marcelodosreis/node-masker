@@ -1,6 +1,10 @@
 <h1 align="center">
   Node Masker 🎭
 </h1>
+<p align="center">
+  <a href="#using-react">Using React</a>
+
+</p>
 
 [![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
 </br>
@@ -40,6 +44,37 @@ mask('12345678901', patterns) // gets firts pattern (999.999.999-99)
 
 mask('12345678000106', patterns) // gets second pattern (99.999.999/9999-99)
 // 12.345.678/0001-06
+```
+## Using React
+
+```js
+import React, { useState } from "react";
+import { mask as masker, unMask } from "node-masker";
+
+const InputMask = ({ mask, onChange, value, ...props }) => {
+  const handleChange = ({ target }) => {
+    const originalValue = unMask(target.value);
+    onChange(originalValue);
+  };
+
+  return (
+    <Input {...props} onChange={handleChange} value={masker(value, mask)} />
+  );
+};
+
+function InputWrapper() {
+  const [value, setValue] = useState("");
+  return (
+    <InputMask
+      type="text"
+      name="doc"
+      mask={["99/99/9999", "(999) 999-9999"]}
+      placeholder="Birthday or Phone "
+      onChange={setValue}
+      value={value}
+    />
+  );
+}
 ```
 
 ## License
