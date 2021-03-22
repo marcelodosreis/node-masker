@@ -1,3 +1,3 @@
 import { mask, unMask } from './lib/mask';
 
-export default { mask, unMask };
+export { mask, unMask };

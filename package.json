@@ -2,13 +2,17 @@
   "name": "node-masker",
   "version": "1.0.0",
   "description": "node-masker is a javascript mask library make in TypeScript",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": "git@github.com:marcelodosreis/node-masker.git",
   "author": "marcelodosreis <marcelohrpaulo13@gmail.com>",
   "license": "MIT",
-  "keywords": ["mask", "react-mask", "react"],
+  "keywords": [
+    "mask",
+    "react-mask",
+    "react"
+  ],
   "scripts": {
-    "build": "rm -rf build && tsc -p .",
+    "build": "rm -rf build && tsc -p . && cp package_build.json README.md ./build && mv ./build/package_build.json ./build/package.json",
     "test": "jest --no-cache --coverage"
   },
   "devDependencies": {
