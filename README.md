@@ -1,6 +1,14 @@
-<h1 align="center">
-  Node Masker 🎭
-</h1>
+<br />
+
+![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
+
+<p align="center">
+  <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a>
+  </h2>
+</p>
+
+<div>
+  
 <p align="center">
   <a href="#using-react">Using React</a>
 
@@ -12,7 +20,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
 
 
-![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
 
 ## Suport
 <img src="https://user-images.githubusercontent.com/56274028/101970313-79744500-3c08-11eb-90e5-8c09fec2d6bb.png" alt="Javascript" width="40"> <img src=https://user-images.githubusercontent.com/49694866/101971573-0c18e200-3c11-11eb-8933-b2d9e7de6dae.png alt="Typescript" width="40"> 
