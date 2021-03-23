@@ -1,6 +1,6 @@
 {
   "name": "node-masker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "node-masker is a javascript mask library make in TypeScript",
   "main": "build/index.js",
   "repository": "git@github.com:marcelodosreis/node-masker.git",
@@ -14,8 +14,7 @@
   "scripts": {
     "build": "rm -rf build && tsc -p . && cp package_build.json README.md ./build && mv ./build/package_build.json ./build/package.json",
     "test": "jest --no-cache --coverage",
-    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info",
-    "publish": "npm run build && cd build && npm publish"
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",
