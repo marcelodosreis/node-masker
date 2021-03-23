@@ -1,4 +1,3 @@
-<br />
 <p align="center">
   <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a></h2>
 </p>
