@@ -47,8 +47,10 @@ function multimasker(value: string, patterns: string[], options: any) {
  * @param {any} options
  * @returns {string}
  */
-function mask(value: string, pattern: string | string[], options?: any) {
-  return typeof pattern === 'string' ? masker(value, pattern || '', options) : multimasker(value, pattern, options);
+function mask(value: string | number, pattern: string | string[], options?: any) {
+  return typeof pattern === 'string'
+    ? masker(String(value), pattern || '', options)
+    : multimasker(String(value), pattern, options);
 }
 
 export { mask, unMask };
