@@ -13,6 +13,10 @@
 </p>
 
 [![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
+[![npm](https://img.shields.io/npm/v/node-masker.svg)](https://www.npmjs.com/package/node-masker)
+[![npm](https://img.shields.io/npm/dm/node-masker.svg)](https://www.npmjs.com/package/node-masker)
+[![MIT License](https://img.shields.io/github/license/marcelodosreis/node-masker.svg)](https://github.com/marcelodosreis/node-masker/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </br>
 [![NPM](https://nodei.co/npm/node-masker.png)](https://npmjs.org/package/node-masker)
 <br />
