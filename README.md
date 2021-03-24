@@ -1,10 +1,10 @@
+
+
 <p align="center">
   <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a></h2>
 </p>
 
 ![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
-
-
 
 <div>
   
@@ -14,9 +14,10 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
 </br>
+[![NPM](https://nodei.co/npm/node-masker.png)](https://npmjs.org/package/node-masker)
+<br />
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
-
 
 
 ## Suport
