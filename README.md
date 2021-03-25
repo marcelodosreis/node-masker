@@ -19,9 +19,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 </br>
 [![NPM](https://nodei.co/npm/node-masker.png)](https://npmjs.org/package/node-masker)
-<br />
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
 
 
 ## Suport
