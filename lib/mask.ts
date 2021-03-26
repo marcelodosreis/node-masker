@@ -2,7 +2,7 @@
 import toPattern from './toPattern';
 
 /**
- * function function unMask(
+ * function unMask(
  * @param {string} value
  * @returns {string}
  */
@@ -11,7 +11,7 @@ function unMask(value: string) {
 }
 
 /**
- * function function masker(
+ * function masker(
  * @param {string} value
  * @param {string} patterns
  * @param {any} options
@@ -22,7 +22,7 @@ function masker(value: string, pattern: string, options: any) {
 }
 
 /**
- * function function multimasker(
+ * function multimasker(
  * @param {string} value
  * @param {string[]} patterns
  * @param {any} options
@@ -41,7 +41,7 @@ function multimasker(value: string, patterns: string[], options: any) {
 }
 
 /**
- * function function typeof(
+ * function mask(
  * @param {string} value
  * @param {string | string[]} patterns
  * @param {any} options

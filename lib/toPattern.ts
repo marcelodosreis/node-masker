@@ -12,18 +12,13 @@ type OptionPattern = {
  * @param {string | OptionPattern} optionPattern
  * @returns {string}
  */
-function toPattern(
-  value: number | string,
-  optionPattern: string | OptionPattern,
-): string {
-  const pattern =
-    typeof optionPattern === 'object' ? optionPattern.pattern : optionPattern;
+function toPattern(value: number | string, optionPattern: string | OptionPattern): string {
+  const pattern = typeof optionPattern === 'object' ? optionPattern.pattern : optionPattern;
   const patternChars = pattern.replace(/\W/g, '');
   const output = pattern.split('');
   const values = value.toString().replace(/\W/g, '');
   const charsValues = values.replace(/\W/g, '');
-  const placeholder =
-    typeof optionPattern === 'object' ? optionPattern.placeholder : undefined;
+  const placeholder = typeof optionPattern === 'object' ? optionPattern.placeholder : undefined;
   let charCounter = 0;
   let index;
 
@@ -34,10 +29,7 @@ function toPattern(
       if (patternChars.length === charsValues.length) {
         return output.join('');
       }
-      if (
-        placeholder !== undefined &&
-        patternChars.length > charsValues.length
-      ) {
+      if (placeholder !== undefined && patternChars.length > charsValues.length) {
         return addPlaceholder(output, index, placeholder).join('');
       }
       break;
@@ -47,11 +39,7 @@ function toPattern(
       (output[index] === ALPHANUM && values[charCounter].match(/[0-9a-zA-Z]/))
     ) {
       output[index] = values[charCounter++];
-    } else if (
-      output[index] === DIGIT ||
-      output[index] === ALPHA ||
-      output[index] === ALPHANUM
-    ) {
+    } else if (output[index] === DIGIT || output[index] === ALPHA || output[index] === ALPHANUM) {
       if (placeholder !== undefined) {
         return addPlaceholder(output, index, placeholder).join('');
       }
