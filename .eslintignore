@@ -6,3 +6,5 @@ dist
 *.scss
 *.json
 *.svg
+public/
+public
