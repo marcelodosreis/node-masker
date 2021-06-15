@@ -1,29 +1,27 @@
+<h1 align="center">
+  <br>
+  <img src="https://i.imgur.com/GbdQ8tC.png" alt="Rocketseat and Gatsby" width="260">
+</h1>
 
+<h4 align="center">Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> ⚡️🔥</h4>
 
 <p align="center">
-  <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a></h2>
+  <img src="https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK" />
+  <img src="https://img.shields.io/npm/v/node-masker.svg" />
+  <img src="https://img.shields.io/github/license/marcelodosreis/node-masker.svg" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
+  <br />
+  <img src="https://nodei.co/npm/node-masker.png">
+  <br />
+  <img src="https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif">
 </p>
 
-![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
-
-<div>
-  
-<p>
-  <a href="#using-react">Using React?</a>
-</p>
-
-[![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
-[![npm](https://img.shields.io/npm/v/node-masker.svg)](https://www.npmjs.com/package/node-masker)
-[![npm](https://img.shields.io/npm/dm/node-masker.svg)](https://www.npmjs.com/package/node-masker)
-[![MIT License](https://img.shields.io/github/license/marcelodosreis/node-masker.svg)](https://github.com/marcelodosreis/node-masker/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-</br>
-[![NPM](https://nodei.co/npm/node-masker.png)](https://npmjs.org/package/node-masker)
-
-
-## Suport
-<img src="https://user-images.githubusercontent.com/56274028/101970313-79744500-3c08-11eb-90e5-8c09fec2d6bb.png" alt="Javascript" width="40"> <img src=https://user-images.githubusercontent.com/49694866/101971573-0c18e200-3c11-11eb-8933-b2d9e7de6dae.png alt="Typescript" width="40"> 
-<img src=https://user-images.githubusercontent.com/49694866/101971326-6d3fb600-3c0f-11eb-9d35-d34da546a40a.png alt="React" width="40"> 
+<!-- <p align="center">
+  <a href="#install">Install</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#need-help">Need help?</a> •
+  <a href="#license">License</a>
+</p> -->
 
 ## Install
 
@@ -75,37 +73,17 @@ mask('9BGRD08X04G117974', "SS.SS.SSSSS.S.S.SSSSSS"); // -> 9B.GR.D08X0.4.G.11797
 mask('4', {pattern: "(999) 999-9999", placeholder: "x"}); // -> (4xx) xxx-xxxx
 ```
 
-## Using React
+## Contributing
 
-```js
-import React, { useState } from "react";
-import { mask as masker, unMask } from "node-masker";
+Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](.github/CONTRIBUTING.md) and our
+[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests. Also, don't forget to check the roadmap.
 
-const InputMask = ({ mask, onChange, value, ...props }) => {
-  const handleChange = ({ target }) => {
-    const originalValue = unMask(target.value);
-    onChange(originalValue);
-  };
+## Need help?
 
-  return (
-    <input {...props} onChange={handleChange} value={masker(value, mask)} />
-  );
-};
+If you need help, feel free to open an issue with a description of the problem
+you're facing or, if you prefer, you can chat with us on our
+[forum](https://github.com/Rocketseat/gatsby-themes/discussions).
 
-function InputWrapper() {
-  const [value, setValue] = useState("");
-  return (
-    <InputMask
-      type="text"
-      name="doc"
-      mask={["99/99/9999", "(999) 999-9999"]}
-      placeholder="Birthday or Phone "
-      onChange={setValue}
-      value={value}
-    />
-  );
-}
-```
 
 ## License
 
