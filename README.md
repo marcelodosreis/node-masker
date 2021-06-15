@@ -23,6 +23,14 @@
   <a href="#license">License</a>
 </p> -->
 
+## Suport
+| Technology            |         Status            |
+| :-------------------- | :-----------------------: |
+| [Node](Node)          |      Done ✅              |
+| [React](React)        |      Done ✅              |
+| [Angular](Angular)    |Working in Progress ⚒️      |
+| [Vue](Vue)            |Working in Progress ⚒️      |
+
 ## Install
 
 ```
@@ -73,16 +81,34 @@ mask('9BGRD08X04G117974', "SS.SS.SSSSS.S.S.SSSSSS"); // -> 9B.GR.D08X0.4.G.11797
 mask('4', {pattern: "(999) 999-9999", placeholder: "x"}); // -> (4xx) xxx-xxxx
 ```
 
-## Contributing
+## Using React
 
-Thanks for being interested in contributing! We’re so glad you want to help! Please take a little bit of your time and look at our [contributing guidelines](.github/CONTRIBUTING.md) and our
-[code of conduct](.github/CODE_OF_CONDUCT.md)! All type of contributions are welcome, such as bug fixes, issues or feature requests. Also, don't forget to check the roadmap.
-
-## Need help?
-
-If you need help, feel free to open an issue with a description of the problem
-you're facing or, if you prefer, you can chat with us on our
-[forum](https://github.com/Rocketseat/gatsby-themes/discussions).
+```js
+import React, { useState } from "react";
+import { mask as masker, unMask } from "node-masker";
+const InputMask = ({ mask, onChange, value, ...props }) => {
+  const handleChange = ({ target }) => {
+    const originalValue = unMask(target.value);
+    onChange(originalValue);
+  };
+  return (
+    <input {...props} onChange={handleChange} value={masker(value, mask)} />
+  );
+};
+function InputWrapper() {
+  const [value, setValue] = useState("");
+  return (
+    <InputMask
+      type="text"
+      name="doc"
+      mask={["99/99/9999", "(999) 999-9999"]}
+      placeholder="Birthday or Phone "
+      onChange={setValue}
+      value={value}
+    />
+  );
+}
+```
 
 
 ## License
