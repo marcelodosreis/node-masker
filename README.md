@@ -1,6 +1,7 @@
 <h1 align="center">
   <br>
-  <img src="https://i.imgur.com/GbdQ8tC.png" alt="Rocketseat and Gatsby" width="260">
+  <img src="https://i.imgur.com/GbdQ8tC.png" width="260">
+  
 </h1>
 
 <h4 align="center">Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> ⚡️🔥</h4>
