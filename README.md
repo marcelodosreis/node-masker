@@ -1,29 +1,35 @@
+<h1 align="center">
+  <br>
+  <img src="https://i.imgur.com/GbdQ8tC.png" alt="Rocketseat and Gatsby" width="260">
+</h1>
 
+<h4 align="center">Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> ⚡️🔥</h4>
 
 <p align="center">
-  <h2>🎭 Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/">TypeScript</a></h2>
+  <img src="https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK" />
+  <img src="https://img.shields.io/npm/v/node-masker.svg" />
+  <img src="https://img.shields.io/github/license/marcelodosreis/node-masker.svg" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
+  <br />
+  <img src="https://nodei.co/npm/node-masker.png">
+  <br />
+  <img src="https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif">
 </p>
 
-![Alt Text](https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif)
-
-<div>
-  
-<p>
-  <a href="#using-react">Using React?</a>
-</p>
-
-[![Coverage Status](https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK)](https://coveralls.io/github/marcelodosreis/node-masker?branch=main)
-[![npm](https://img.shields.io/npm/v/node-masker.svg)](https://www.npmjs.com/package/node-masker)
-[![npm](https://img.shields.io/npm/dm/node-masker.svg)](https://www.npmjs.com/package/node-masker)
-[![MIT License](https://img.shields.io/github/license/marcelodosreis/node-masker.svg)](https://github.com/marcelodosreis/node-masker/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-</br>
-[![NPM](https://nodei.co/npm/node-masker.png)](https://npmjs.org/package/node-masker)
-
+<!-- <p align="center">
+  <a href="#install">Install</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#need-help">Need help?</a> •
+  <a href="#license">License</a>
+</p> -->
 
 ## Suport
-<img src="https://user-images.githubusercontent.com/56274028/101970313-79744500-3c08-11eb-90e5-8c09fec2d6bb.png" alt="Javascript" width="40"> <img src=https://user-images.githubusercontent.com/49694866/101971573-0c18e200-3c11-11eb-8933-b2d9e7de6dae.png alt="Typescript" width="40"> 
-<img src=https://user-images.githubusercontent.com/49694866/101971326-6d3fb600-3c0f-11eb-9d35-d34da546a40a.png alt="React" width="40"> 
+| Technology            |         Status            |
+| :-------------------- | :-----------------------: |
+| [Node](Node)          |      Done ✅              |
+| [React](React)        |      Done ✅              |
+| [Angular](Angular)    |Working in Progress ⚒️      |
+| [Vue](Vue)            |Working in Progress ⚒️      |
 
 ## Install
 
@@ -80,18 +86,15 @@ mask('4', {pattern: "(999) 999-9999", placeholder: "x"}); // -> (4xx) xxx-xxxx
 ```js
 import React, { useState } from "react";
 import { mask as masker, unMask } from "node-masker";
-
 const InputMask = ({ mask, onChange, value, ...props }) => {
   const handleChange = ({ target }) => {
     const originalValue = unMask(target.value);
     onChange(originalValue);
   };
-
   return (
     <input {...props} onChange={handleChange} value={masker(value, mask)} />
   );
 };
-
 function InputWrapper() {
   const [value, setValue] = useState("");
   return (
@@ -106,6 +109,7 @@ function InputWrapper() {
   );
 }
 ```
+
 
 ## License
 
