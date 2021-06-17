@@ -31,15 +31,37 @@
 | [Angular](Angular)    |Working in Progress ⚒️      |
 | [Vue](Vue)            |Working in Progress ⚒️      |
 
-## Install
 
-```
+# Getting Started
+
+Welcome to the Node Masker documentation!
+
+If you are new to using Node Masker, we recommend that you start testing all our features.
+
+If you have questions about anything related to the Node Masker feel free to ask our community in the GitHub discussions.
+
+### System Requirements
+
+- [Node.js 12.x or later](https://nodejs.org/en/)
+
+### Setup
+
+Now just install `Node Masker` and start using: D
+
+```bash
+npm install node-masker
+# or
 yarn add node-masker
 ```
 
-## Usage
 
-```js
+# Usage
+
+node-masker requires React 12.x or later. If you need support for older versions, use version 2.
+
+
+### Examples
+```javascript
 import { mask } from 'node-masker'
 
 const value = 'ABC1C83'
@@ -51,7 +73,7 @@ mask(value, pattern)
 
 Pattern can be a pattern array, so remask choose one pattern based on pattern/value length match
 
-```js
+```javascript
 const patterns = ['999.999.999-99', '99.999.999/9999-99']
 
 mask('12345678901', patterns) // gets firts pattern (999.999.999-99)
@@ -61,42 +83,80 @@ mask('12345678000106', patterns) // gets second pattern (99.999.999/9999-99)
 // 12.345.678/0001-06
 ```
 
-### More Examples
+#### More Examples
 
-``` javascript
+```javascript
 import { mask } from 'node-masker'
 
 // Converts value to masked phone
 mask(1099911111, "(99) 9999-9999"); // -> (10) 9991-1111
+
 // Converts value to masked date
 mask(12122000, "99/99/9999"); // -> 12/12/2000
+
 // Converts value to masked document
 mask(99911111101, "999.999.999-99"); // -> 999.111.111-01
+
 // Converts value to masked car plate
 mask('ABC1234', "AAA-9999"); // -> ABC-1234
+
 // Converts value to masked vehicle identification
 mask('9BGRD08X04G117974', "SS.SS.SSSSS.S.S.SSSSSS"); // -> 9B.GR.D08X0.4.G.117974
 
-// Pass in an optional placeholder option to represent remaining characters to be entered
+/* Pass in an optional placeholder option to represent remaining
+characters to be entered */
 mask('4', {pattern: "(999) 999-9999", placeholder: "x"}); // -> (4xx) xxx-xxxx
 ```
 
-## Using React
+# Usage Mask Details
 
-```js
+### `mask`
+
+Mask format. Can be either a string or array of characters and regular expressions.<br /><br />
+
+```javascript
+mask('130499', "99/99/99")
+```
+
+Simple masks can be defined as strings. The following characters will define mask format:
+
+| Character | Allowed input |
+| :-------: | :-----------: |
+|     9     |      0-9      |
+|     a     |   a-z, A-Z    |
+|    \*     | 0-9, a-z, A-Z |
+
+Any format character can be escaped with a backslash.<br /><br />
+
+More complex masks can be defined as an array of regular expressions and constant characters.
+
+```jsx
+// Canadian postal code mask
+const firstLetter = /(?!.*[DFIOQU])[A-VXY]/i;
+const letter = /(?!.*[DFIOQU])[A-Z]/i;
+const digit = /[0-9]/;
+const mask = [firstLetter, digit, letter, " ", digit, letter, digit];
+```
+
+# Using React
+
+To use the Node Mask on an `input` element in React, you need an InputWrapper
+
+```javascript
 import React, { useState } from "react";
 import { mask as masker, unMask } from "node-masker";
-const InputMask = ({ mask, onChange, value, ...props }) => {
-  const handleChange = ({ target }) => {
-    const originalValue = unMask(target.value);
-    onChange(originalValue);
-  };
-  return (
-    <input {...props} onChange={handleChange} value={masker(value, mask)} />
-  );
-};
-function InputWrapper() {
+
+const InputMask = ({ mask, onChange, value, ...props }) => (
+  <input
+    {...props}
+    onChange={({ target }) => onChange(unMask(target.value))}
+    value={masker(value, mask)}
+  />
+);
+
+function App() {
   const [value, setValue] = useState("");
+
   return (
     <InputMask
       type="text"
@@ -108,7 +168,10 @@ function InputWrapper() {
     />
   );
 }
+
+export default App;
 ```
+Finished example of how to use the powerful Node Maske
 
 
 ## License
