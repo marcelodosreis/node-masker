@@ -1,0 +1,32 @@
+import {
+  ScreenContainer,
+  Button,
+  HeroSection,
+  Hero,
+  HeroBody,
+  HeroTitle,
+  HeroTeaser,
+  HeroActionList,
+  HeroAction,
+} from "smooth-doc/components";
+import heroBackgroundImageURL from "../images/hero-background.png";
+
+<HeroSection>
+  <Hero backgroundImageURL={heroBackgroundImageURL}>
+    <HeroBody>
+      <HeroTitle>
+        Node-masker is a javascript mask library made in TypeScript 🎭
+      </HeroTitle>
+      <HeroTeaser>
+        Compatibility with large scale applications using Node and React
+      </HeroTeaser>
+      <HeroActionList>
+        <HeroAction>
+          <Button variant="neutral" forwardedAs="a" href="/docs/">
+            Browse Docs
+          </Button>
+        </HeroAction>
+      </HeroActionList>
+    </HeroBody>
+  </Hero>
+</HeroSection>
