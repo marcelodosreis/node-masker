@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/node-masker",
   plugins: [
     {
       resolve: "smooth-doc",

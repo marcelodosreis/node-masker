@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://example.com/node-masker/sitemap/sitemap-index.xml
+Host: https://example.com
