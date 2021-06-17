@@ -103,3 +103,5 @@ build
 # TernJS port file
 .tern-port
 .coveralls.yml
+
+public/public
