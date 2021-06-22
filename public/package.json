@@ -6,8 +6,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "start": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "start": "gatsby serve -p $PORT"
   },
   "dependencies": {
     "gatsby": "^3.7.2",
