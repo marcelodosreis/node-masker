@@ -8,18 +8,16 @@ import {
   HeroTeaser,
   HeroActionList,
   HeroAction,
-} from "smooth-doc/components";
-import heroBackgroundImageURL from "../images/hero-background.png";
+} from 'smooth-doc/components';
+import heroBackgroundImageURL from '../images/hero-background.png';
+import { Helmet } from 'react-helmet';
 
 <HeroSection>
+  <Helmet meta={[{ name: 'keywords', content: 'react mask, node mask, react masker, react, mask, javascript mask, jsmask' }]} />
   <Hero backgroundImageURL={heroBackgroundImageURL}>
     <HeroBody>
-      <HeroTitle>
-        Node-masker is a javascript mask library made in TypeScript 🎭
-      </HeroTitle>
-      <HeroTeaser>
-        Compatibility with large scale applications using Node and React
-      </HeroTeaser>
+      <HeroTitle>Node-masker is a javascript mask library made in TypeScript 🎭</HeroTitle>
+      <HeroTeaser>Compatibility with large scale applications using Node and React</HeroTeaser>
       <HeroActionList>
         <HeroAction>
           <Button variant="neutral" forwardedAs="a" href="/docs/">
