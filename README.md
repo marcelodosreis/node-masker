@@ -7,7 +7,7 @@
 <h4 align="center">Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> ⚡️🔥</h4>
 
 <p align="center">
-  <img src="https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main&t=hJ0bvK" />
+  <img src="https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main" />  
   <img src="https://img.shields.io/npm/v/node-masker.svg" />
   <img src="https://img.shields.io/github/license/marcelodosreis/node-masker.svg" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
