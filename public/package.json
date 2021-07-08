@@ -13,6 +13,7 @@
     "gh-pages": "^3.2.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "smooth-doc": "^5.0.4"
+    "smooth-doc": "^5.0.4",
+    "react-helmet": "^6.1.0"
   }
 }

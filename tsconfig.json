@@ -19,7 +19,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "sourceMap": false
+    "sourceMap": true
   },
   "exclude": ["./node_modules/**/*", "./build/**/*", "**/tests/*.test.ts"],
   "include": ["./**/*"]
