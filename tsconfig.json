@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     // "noImplicitAny": false,
+    "skipLibCheck": true,
     "lib": ["es2018", "es5"],
-    "types": ["node", "@types/jest"],
+    "types": ["node", "@types/jest", "@types/node"],
     "baseUrl": ".",
     "paths": {
       "@/types/*": ["./types/*"],
