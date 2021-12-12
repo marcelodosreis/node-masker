@@ -167,7 +167,7 @@ function App() {
 
 export default App;
 ```
-Finished example of how to use the powerful Node Maske
+Finished example of how to use the powerful Node Masker
 
 
 ## License
