@@ -56,9 +56,6 @@ yarn add node-masker
 
 # Usage
 
-node-masker requires React 12.x or later. If you need support for older versions, use version 2.
-
-
 ### Examples
 ```javascript
 import { mask } from 'node-masker'
