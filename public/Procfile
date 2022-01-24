@@ -1,1 +1,1 @@
-web: yarn start -- --port ${PORT?}
+web: yarn start --port ${PORT?}
