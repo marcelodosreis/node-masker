@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p $PORT",
     "build": "gatsby build",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -p $PORT",
     "start": "gatsby serve -p $PORT"
   },
   "dependencies": {
