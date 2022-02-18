@@ -12,8 +12,8 @@
     "react"
   ],
   "engines": {
-    "node": "14.0.0",
-    "npm": "8.3.2"
+    "node": ">=14.0.0",
+    "npm": ">=8.3.2"
     },
   "scripts": {
     "build": "rm -rf build && tsc -p . && cp package_build.json README.md ./build && mv ./build/package_build.json ./build/package.json",
