@@ -11,7 +11,7 @@ on:
 
 
 jobs:
-    build:
+    Lint:
         runs-on: ubuntu-latest
         strategy:
             matrix:
@@ -29,13 +29,30 @@ jobs:
             - name: Install dependencies
               run: yarn --fronzen-lockfile
 
-            - name: Run the tests
-              run: yarn test
-
-            - name: Send tests to Coveralls
-              run: yarn test:coveralls
-              with:
-                github-token: ${{ secrets.GITHUB_TOKEN }}
-
             - name: Run Lint
               run: yarn lint
+
+    Tests:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+            - name: Run the tests
+              run: yarn test
+           
+    Coveralls:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+              - name: Coveralls GitHub Action
+                uses: coverallsapp/github-action@1.1.3
+
+              - name: Send tests to Coveralls
+                run: yarn test:coveralls
+
+
