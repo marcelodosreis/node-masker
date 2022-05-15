@@ -1,0 +1,40 @@
+name: Complete workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [14.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - run: git fetch --prune --unshallow
+
+            - name: Use Node.js ${{matrix.node-version}}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{matrix.node-version}}
+
+            - name: Install dependencies
+              run: yarn --fronzen-lockfile
+
+            - name: Run the tests and generate coverage report
+              run: yarn test:coverage
+
+            - name: Send tests to Coveralls
+              run: yarn test:coveralls
+
+
+            - name: Run Lint
+              run: yarn lint
