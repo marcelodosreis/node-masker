@@ -29,8 +29,8 @@ jobs:
             - name: Install dependencies
               run: yarn --fronzen-lockfile
 
-            - name: Run the tests and generate coverage report
-              run: yarn test:coverage
+            - name: Run the tests
+              run: yarn test
 
             - name: Send tests to Coveralls
               run: yarn test:coveralls
