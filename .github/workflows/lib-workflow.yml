@@ -35,7 +35,7 @@ jobs:
             - name: Send tests to Coveralls
               run: yarn test:coveralls
               with:
-              github-token: ${{ secrets.GITHUB_TOKEN }}
+                github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Run Lint
               run: yarn lint
