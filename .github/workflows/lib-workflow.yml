@@ -54,34 +54,8 @@ jobs:
             - name: Run the tests
               run: yarn test
            
-    Coveralls:
-        runs-on: ubuntu-latest
-        needs: [Lint, Tests]
-        strategy:
-            matrix:
-                node-version: [14.x]
-
-        steps:
-            - uses: actions/checkout@v2
-            - run: git fetch --prune --unshallow
-
-            - name: Use Node.js ${{matrix.node-version}}
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{matrix.node-version}}
-
-            - name: Install dependencies
-              run: yarn --fronzen-lockfile
-
-            - name: Testing
-              run: yarn test
-
             - name: Coveralls GitHub Action
               uses: coverallsapp/github-action@1.1.3
               with:
                 github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
-
-            - name: Send tests to Coveralls
-              run: yarn test:coveralls
-
 
