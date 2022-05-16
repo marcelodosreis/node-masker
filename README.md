@@ -5,6 +5,7 @@
 </h1>
 
 <h4 align="center">Node-masker is a javascript mask library made in <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> ⚡️🔥</h4>
+<h5 align="center">Multi-Mask operation and Compatibility with large scale applications using Node and React 👋 ⚛️</h5>
 
 <p align="center">
   <img src="https://coveralls.io/repos/github/marcelodosreis/node-masker/badge.svg?branch=main" />
