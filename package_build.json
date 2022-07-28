@@ -1,7 +1,7 @@
 {
   "name": "node-masker",
   "version": "1.0.8",
-  "description": "node-masker is a javascript mask library make in TypeScript",
+  "description": "node-masker is a javascript mask library made in TypeScript",
   "repository": "git@github.com:marcelodosreis/node-masker.git",
   "author": "marcelodosreis <marcelohrpaulo13@gmail.com>",
   "license": "MIT",
