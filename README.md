@@ -80,6 +80,45 @@ mask('12345678000106', patterns) // gets second pattern (99.999.999/9999-99)
 // 12.345.678/0001-06
 ```
 
+#### Example of cursor control with mask
+
+```javascript
+import { mask, unMask } from './mask';
+
+const inputElement = document.getElementById('myInput');
+const cursorPosition = { x: 0, y: 0 };
+
+inputElement.addEventListener('input', (event) => {
+  const previousValue = event.target.value;
+  const cursorPositionBeforeEdit = getCursorPosition(event.target);
+
+  // Edit or delete the masked value
+  const newValue = mask(event.target.value);
+
+  // Set the cursor position back to the captured position
+  setCursorPosition(event.target, cursorPositionBeforeEdit);
+
+  // Update the input value with the masked value
+  event.target.value = newValue;
+});
+
+function getCursorPosition(element) {
+  const selection = document.getSelection();
+  const offset = selection.getRangeAt(0).startOffset;
+
+  return {
+    x: element.selectionStart,
+    y: offset,
+  };
+}
+
+function setCursorPosition(element, position) {
+  element.focus();
+  element.selectionStart = position.x;
+  element.selectionEnd = position.y;
+}
+```
+
 #### More Examples
 
 ```javascript
