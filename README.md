@@ -160,4 +160,4 @@ Finished example of how to use the powerful Node Masker
 
 ## License
 
-MIT © [Marcelo dos Reis](https://github.com/marcelodosreis))
+MIT © [Marcelo dos Reis](https://github.com/marcelodosreis)
