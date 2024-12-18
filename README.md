@@ -13,8 +13,6 @@
   <img src="https://img.shields.io/github/license/marcelodosreis/node-masker.svg" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" />
   <br />
-  <img src="https://nodei.co/npm/node-masker.png">
-  <br />
   <img src="https://media.giphy.com/media/AMlJ03rEglc3JtHeLI/giphy.gif">
 </p>
 
