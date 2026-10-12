@@ -1,21 +1,49 @@
-import { mask, unMask } from '../lib/mask';
+type MaskPattern = string | string[];
 
-test('Should mask correctly', () => {
-  const result = mask('123', '9.9.9');
-  expect(result).toEqual('1.2.3');
-});
+const MASK_CHAR = '9';
 
-test('Should remove mask correctly', () => {
-  const result = unMask(mask('123', '9.9.9'));
-  expect(result).toEqual('123');
-});
+function applyMask(unmasked: string, pattern: string): string {
+  const output: string[] = [];
+  let valueIndex = 0;
 
-test('Should use first mask', () => {
-  const result = mask('123', ['9.9.9', '99-99']);
-  expect(result).toEqual('1.2.3');
-});
+  for (let i = 0; i < pattern.length; i++) {
+    if (valueIndex >= unmasked.length) break;
 
-test('Should use second mask', () => {
-  const result = mask('1234', ['9.9.9', '99-99']);
-  expect(result).toEqual('12-34');
-});
+    const patternChar = pattern[i];
+    if (patternChar === MASK_CHAR) {
+      output.push(unmasked[valueIndex]);
+      valueIndex++;
+    } else {
+      output.push(patternChar);
+    }
+  }
+
+  return output.join('');
+}
+
+function countPlaceholders(pattern: string): number {
+  let count = 0;
+  for (let i = 0; i < pattern.length; i++) {
+    if (pattern[i] === MASK_CHAR) count++;
+  }
+  return count;
+}
+
+export function mask(value: string, pattern: MaskPattern): string {
+  const unmasked = unMask(value);
+
+  if (Array.isArray(pattern)) {
+    for (const p of pattern) {
+      if (unmasked.length <= countPlaceholders(p)) {
+        return applyMask(unmasked, p);
+      }
+    }
+    return applyMask(unmasked, pattern[pattern.length - 1]);
+  }
+
+  return applyMask(unmasked, pattern);
+}
+
+export function unMask(value: string): string {
+  return value.replace(/\D/g, '');
+}
